@@ -8,9 +8,9 @@ import javax.swing.SwingUtilities;
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            RepositorioCliente clientes = new RepositorioClienteTxt("datos/clientes.txt");
-            RepositorioMascota mascotas = new RepositorioMascotaTxt("datos/mascotas.txt", clientes);
-            VeterinariaService service = new VeterinariaService(clientes,mascotas);
+            RepositorioCliente repoCliente = new RepositorioClienteMySQL();
+            RepositorioMascota repoMascota = new RepositorioMascotaMySQL();
+            VeterinariaService service = new VeterinariaService(repoCliente,repoMascota);
             new VentanaVeterinaria(new VeterinariaController(service)).setVisible(true);
         });
     }
