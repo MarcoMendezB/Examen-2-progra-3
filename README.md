@@ -34,4 +34,4 @@ Ejecute la clase principal `examen.veterinaria.Main`.
 1. **Acceso controlado mediante procedimientos almacenados (Permitido):**
    Conectado en Workbench como `vet_app`, ejecutar:
    ```sql
-   CALL veterinaria.sp_listar_mascotas();
+   CALL veterinaria.sp_listar_mascotas(); 
